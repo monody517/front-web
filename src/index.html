@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
     <title>front-web</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="globalHeader">
-                    <ul class="headerList">                
-                        <li class="icon">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-baidu"></use>
-                            </svg>
-                        </li>          
-                        <li class="icon">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-Google"></use>
-                            </svg>
-                        </li>         
-                        <li class="icon">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-sogou"></use>
-                            </svg>
-                        </li>            
-                </ul>
-                    <form class="searchForm" method="get" action="https://www.google.com/search">
-                    <input name="q" type="text">
-                    <input name="oq" type="hidden">
-                    <button type="submit">搜索</button>
-                </form>
+      <ul class="headerList">
+        <li class="sIcon active">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-Google"></use>
+          </svg>
+          谷歌
+        </li>
+        <li class="sIcon">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-baidu"></use>
+          </svg>
+          百度
+        </li>
+        <li class="sIcon">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-sogou"></use>
+          </svg>
+          搜狗
+        </li>
+      </ul>
+      <form
+        class="searchForm"
+        id="searchGoogle"
+        method="get"
+        action="https://www.google.com/search"
+      >
+        <input name="q" type="text" placeholder="在google上搜索" />
+        <input name="oq" type="hidden" />
+        <button type="submit">搜索</button>
+      </form>
+      <form
+        class="searchForm"
+        id="searchBaidu"
+        action="http://www.baidu.com/baidu"
+        method="get"
+      >
+        <input name="" type="hidden" value="baidu" />
+        <input type="text" name="word" placeholder="百度一下，你就知道" />
+        <button type="submit">搜索</button>
+      </form>
+      <form
+        class="searchForm"
+        id="searchSougou"
+        action="http://www.sogou.com/web"
+        method="get"
+      >
+        <input type="text" name="query" placeholder="在搜狗上搜索" />
+        <button type="submit">搜索</button>
+      </form>
     </header>
 
-
-
-
-
-
-
-
-
     <main class="globalMain">
-        <ul class="siteList">
-            <li class="last">
-                <div class="addButton">
-                    <div class="icon">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-add"></use>
-                        </svg>
-                    </div>
-                    <div class="text">新增网站</div>     
-                </div>
-            </li>
-        </ul>
+      <ul class="siteList">
+        <li class="last">
+          <div class="addButton">
+            <div class="icon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-add"></use>
+              </svg>
+            </div>
+            <div class="text">新增网站</div>
+          </div>
+        </li>
+      </ul>
     </main>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//at.alicdn.com/t/font_2434827_pfcr0942vc.js"></script>
+    <script src="//at.alicdn.com/t/font_2434827_x1an12aw16.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
