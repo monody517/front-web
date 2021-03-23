@@ -36,6 +36,7 @@ const render = () => {
             hashMap.splice(index,1)
             render()
         })
+        $li.find('.logo').css('color',`${"#"+Math.floor(Math.random()*16777215).toString(16)}`)
     })   
 }
 
@@ -67,7 +68,6 @@ hashMap.push({
 })
 render()
 })
-console.log(hashMap)
 window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)
     localStorage.setItem('x',string) 
@@ -107,7 +107,6 @@ $(document).on('keypress',(e) => {
         }
     }
 })
-
 
 
 

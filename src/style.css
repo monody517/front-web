@@ -43,7 +43,7 @@ body {
 }
 @media (min-width: 500px) {
   .headerList {
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -55,6 +55,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .active {
   color: black;
@@ -66,7 +67,7 @@ body {
 }
 @media (min-width: 500px) {
   .searchForm {
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -84,7 +85,7 @@ body {
 .searchForm > input {
   width: 100%;
   margin-right: 10px;
-  height: 40px;
+  height: 50px;
   padding: 0 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -135,7 +136,7 @@ body {
   flex-direction: column;
   background: white;
   border-radius: 4px;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 1s;
   cursor: pointer;
 }
 .siteList .site > .close {
@@ -167,7 +168,7 @@ body {
   flex-direction: column;
   background: white;
   border-radius: 4px;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 1s;
 }
 .siteList .addButton .icon {
   width: 64px;
