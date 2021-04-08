@@ -11,76 +11,76 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="globalHeader">
-      <ul class="headerList">
-        <li class="sIcon active">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-Google"></use>
-          </svg>
-          谷歌
-        </li>
-        <li class="sIcon">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-baidu"></use>
-          </svg>
-          百度
-        </li>
-        <li class="sIcon">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-sogou"></use>
-          </svg>
-          搜狗
-        </li>
-      </ul>
-      <form
-        class="searchForm"
-        id="searchGoogle"
-        method="get"
-        action="https://www.google.com/search"
-      >
-        <input
-          name="q"
-          type="text"
-          autocomplete="off"
-          placeholder="在google上搜索"
-        />
-        <input name="oq" type="hidden" />
-      </form>
-      <form
-        class="searchForm"
-        id="searchBaidu"
-        action="http://www.baidu.com/baidu"
-        method="get"
-      >
-        <input name="" type="hidden" value="baidu" />
-        <input type="text" name="word" placeholder="百度一下，你就知道" />
-      </form>
-      <form
-        class="searchForm"
-        id="searchSougou"
-        action="http://www.sogou.com/web"
-        method="get"
-      >
-        <input type="text" name="query" placeholder="在搜狗上搜索" />
-      </form>
-    </header>
+    <div class="bodyBox">
+      <img class="bgbox" alt="" src="https://cdn.jsdelivr.net/gh/MobiusBeta/assets/images/BG_A_Default_1.jpg" style="display: block; opacity: 1;">
+      <div class="cover" id="cover" style="opacity: 1;"></div>
+      <header class="globalHeader">
+        <div class="headerList" style="opacity: 0;">
+          <span class="sIcon active">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-google"></use>
+            </svg>
+          </span>
+          <span class="sIcon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-baidu1"></use>
+            </svg>
+          </span>
+          <span class="sIcon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-sogou"></use>
+            </svg>
+          </span>
+        </div>
+        <form
+          class="searchForm"
+          id="searchGoogle"
+          method="get"
+          action="https://www.google.com/search"
+        >
+          <input
+            name="q"
+            type="text"
+            autocomplete="off"
+          />
+          <input name="oq" type="hidden" />
+        </form>
+        <form
+          class="searchForm"
+          id="searchBaidu"
+          action="http://www.baidu.com/baidu"
+          method="get"
+        >
+          <input name="" type="hidden" value="baidu"/>
+          <input type="text" name="word"  autocomplete="off" />
+        </form>
+        <form
+          class="searchForm"
+          id="searchSougou"
+          action="http://www.sogou.com/web"
+          method="get"
+        >
+          <input type="text" name="query"  autocomplete="off" />
+        </form>
+      </header>
 
-    <main class="globalMain">
-      <ul class="siteList">
-        <li class="last">
-          <div class="addButton">
-            <div class="icon">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-add"></use>
-              </svg>
+      <main class="globalMain">
+        <ul class="siteList">
+          <li class="last">
+            <div class="addButton">
+              <div class="icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-add"></use>
+                </svg>
+              </div>
+              <div class="text">新增网站</div>
             </div>
-            <div class="text">新增网站</div>
-          </div>
-        </li>
-      </ul>
-    </main>
+          </li>
+        </ul>
+      </main>
+    </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="//at.alicdn.com/t/font_2434827_x1an12aw16.js"></script>
+    <script src="////at.alicdn.com/t/font_2434827_cj7a59f47nu.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
