@@ -47,6 +47,15 @@ ol {
   background-image: radial-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%),
   radial-gradient(rgba(0,0,0,0) 33%, rgba(0,0,0,0.3) 166%);
 }
+.time{
+  width: 100px;
+  position: relative;
+  left: 50%;
+  margin-left: -50px;
+  top: 100px;
+  color: white;
+  font-size: 36px;
+}
 .globalHeader {
   margin: 20px;
 }

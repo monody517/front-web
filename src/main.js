@@ -1,7 +1,25 @@
 const $siteList = $('.siteList')
 const $lastLi = $siteList.find('li.last')
+const $time = $('.time')
+
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
+
+t = setTimeout(time,1000)
+function time() {
+    clearTimeout(t)
+    const myDate = new Date()
+    let hour = extra(myDate.getHours())
+    let minute = extra(myDate.getMinutes())
+    let second = extra(myDate.getSeconds())
+    $time.text(hour + ':' + minute + ':' + second)
+    t = setTimeout(time,1000)
+}
+function extra(x) {
+    return x < 10 ?  "0" + x : x;
+}
+
+
 const hashMap = xObject || [
     {logo:'S',logoType:'text',url:'https://segmentfault.com/'},
     {logo:'J',logoType:'image',url:'https://juejin.cn/'},
@@ -25,9 +43,9 @@ const render = () => {
                     <svg class="icon">
                         <use xlink:href="#icon-cha"></use>
                     </svg>
-                </div>  
+                </div>
             </div>
-        </li>`).insertBefore($lastLi)    
+        </li>`).insertBefore($lastLi)
         $li.on('click',() => {
             window.open(node.url)
         })
@@ -37,7 +55,7 @@ const render = () => {
             render()
         })
         $li.find('.logo').css('color',`${"#"+Math.floor(Math.random()*16777215).toString(16)}`)
-    })   
+    })
 }
 
 render()
@@ -70,7 +88,7 @@ render()
 })
 window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)
-    localStorage.setItem('x',string) 
+    localStorage.setItem('x',string)
 }
 
 

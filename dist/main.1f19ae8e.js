@@ -120,8 +120,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var $siteList = $('.siteList');
 var $lastLi = $siteList.find('li.last');
+var $time = $('.time');
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
+t = setTimeout(time, 1000);
+
+function time() {
+  clearTimeout(t);
+  var myDate = new Date();
+  var hour = extra(myDate.getHours());
+  var minute = extra(myDate.getMinutes());
+  var second = extra(myDate.getSeconds());
+  $time.text(hour + ':' + minute + ':' + second);
+  t = setTimeout(time, 1000);
+}
+
+function extra(x) {
+  return x < 10 ? "0" + x : x;
+}
+
 var hashMap = xObject || [{
   logo: 'S',
   logoType: 'text',
@@ -139,7 +156,7 @@ var simplifyUrl = function simplifyUrl(url) {
 var render = function render() {
   $siteList.find('li:not(.last)').remove();
   hashMap.forEach(function (node, index) {
-    var $li = $("<li class=\"siteLi\">  \n            <div class=\"site\">\n                <div class=\"logo\">".concat(node.logo, "</div>\n                <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n                <div class=\"close\">\n                    <svg class=\"icon\">\n                        <use xlink:href=\"#icon-cha\"></use>\n                    </svg>\n                </div>  \n            </div>\n        </li>")).insertBefore($lastLi);
+    var $li = $("<li class=\"siteLi\">  \n            <div class=\"site\">\n                <div class=\"logo\">".concat(node.logo, "</div>\n                <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n                <div class=\"close\">\n                    <svg class=\"icon\">\n                        <use xlink:href=\"#icon-cha\"></use>\n                    </svg>\n                </div>\n            </div>\n        </li>")).insertBefore($lastLi);
     $li.on('click', function () {
       window.open(node.url);
     });
@@ -286,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51951" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62793" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
