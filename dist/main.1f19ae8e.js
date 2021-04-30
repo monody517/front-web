@@ -264,12 +264,18 @@ var $searchForm = $('.searchForm');
 var $cover = $('.cover');
 var $bgbox = $('.bgbox');
 $searchForm.on('click', function (e) {
+  $time.css({
+    'visibility': 'hidden'
+  });
   $bgbox.addClass('focus');
   $headerList.css({
     "opacity": "1"
   });
 });
 $cover.on('click', function (e) {
+  $time.css({
+    'visibility': 'visible'
+  });
   $bgbox.removeClass('focus');
   $headerList.css({
     "opacity": "0"
@@ -303,7 +309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62793" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53066" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

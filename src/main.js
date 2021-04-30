@@ -129,10 +129,12 @@ const $searchForm = $('.searchForm')
 const $cover = $('.cover')
 const $bgbox = $('.bgbox')
 $searchForm.on('click',function(e){
+    $time.css({'visibility':'hidden'})
     $bgbox.addClass('focus')
     $headerList.css({"opacity":"1"})
 })
 $cover.on('click',function(e){
+    $time.css({'visibility':'visible'})
     $bgbox.removeClass('focus')
     $headerList.css({"opacity":"0"})
 })
