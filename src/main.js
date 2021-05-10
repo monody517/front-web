@@ -11,9 +11,8 @@ function time() {
     const myDate = new Date()
     let hour = extra(myDate.getHours())
     let minute = extra(myDate.getMinutes())
-    let second = extra(myDate.getSeconds())
-    $time.text(hour + ':' + minute + ':' + second)
-    t = setTimeout(time,1000)
+    $time.text(hour + ':' + minute)
+    t = setTimeout(time,3000)
 }
 function extra(x) {
     return x < 10 ?  "0" + x : x;
@@ -126,6 +125,10 @@ $(document).on('keypress',(e) => {
     }
 })
 const $searchForm = $('.searchForm')
+const $input = $($searchForm.children('input')[0])
+$input.on('click',function(){
+    $input.css({'width':'500px'})
+})
 const $cover = $('.cover')
 const $bgbox = $('.bgbox')
 $searchForm.on('click',function(e){

@@ -48,6 +48,7 @@ ol {
   radial-gradient(rgba(0,0,0,0) 33%, rgba(0,0,0,0.3) 166%);
 }
 .time{
+  width: 100px;
   position: relative;
   color:white;
   font-size: 24px;
@@ -107,8 +108,9 @@ ol {
   background-color: rgba(255,255,255,.4);
 }
 .searchForm {
-  display: flex;
+
   justify-content: space-between;
+  text-align: center;
 }
 @media (min-width: 500px) {
   .searchForm {
@@ -128,13 +130,18 @@ ol {
   top: -90999px;
 }
 .searchForm > input {
-  width: 100%;
-  margin-right: 10px;
-  height: 50px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-top: 10px;
+  display: inline-block;
+  width:200px;
+  padding:9px 15px;
+  background: rgba(255,255,255,.6);
+  border-radius: 25px;
+  box-shadow: rgb(0 0 0 / 30%) 0 0 10px;
+  outline: none;
+  transition: 0.5s;
+}
+.searchForm > input:hover{
+  
+  width:500px;
 }
 .globalMain {
   max-width: 900px;

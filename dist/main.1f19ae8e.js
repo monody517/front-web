@@ -130,9 +130,8 @@ function time() {
   var myDate = new Date();
   var hour = extra(myDate.getHours());
   var minute = extra(myDate.getMinutes());
-  var second = extra(myDate.getSeconds());
-  $time.text(hour + ':' + minute + ':' + second);
-  t = setTimeout(time, 1000);
+  $time.text(hour + ':' + minute);
+  t = setTimeout(time, 3000);
 }
 
 function extra(x) {
@@ -261,6 +260,12 @@ $(document).on('keypress', function (e) {
   }
 });
 var $searchForm = $('.searchForm');
+var $input = $($searchForm.children('input')[0]);
+$input.on('click', function () {
+  $input.css({
+    'width': '500px'
+  });
+});
 var $cover = $('.cover');
 var $bgbox = $('.bgbox');
 $searchForm.on('click', function (e) {
@@ -309,7 +314,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53066" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55334" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
