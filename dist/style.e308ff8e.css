@@ -34,10 +34,12 @@ ol {
 .bgbox{
   position: fixed;
   z-index: -3;
+  transition: 0.5s;
 }
 .focus{
   filter: blur(10px);
   transform:scale(1.1);
+  transition: 0.5s;
 }
 .cover{
   width: 100%;
@@ -71,7 +73,7 @@ ol {
 }
 @media (min-width: 500px) {
   .globalHeader {
-    margin: 200px 0 200px;
+    margin: 200px 0 50px;
   }
 }
 .globalHeader .sIcon {
@@ -108,8 +110,6 @@ ol {
   background-color: rgba(255,255,255,.4);
 }
 .searchForm {
-
-  justify-content: space-between;
   text-align: center;
 }
 @media (min-width: 500px) {
@@ -130,7 +130,8 @@ ol {
   top: -90999px;
 }
 .searchForm > input {
-  display: inline-block;
+  position: relative;
+  top: -100px;
   width:200px;
   padding:9px 15px;
   background: rgba(255,255,255,.6);
@@ -139,9 +140,9 @@ ol {
   outline: none;
   transition: 0.5s;
 }
-.searchForm > input:hover{
-  
-  width:500px;
+
+.active{
+  width: 500px;
 }
 .globalMain {
   max-width: 900px;

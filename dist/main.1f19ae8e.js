@@ -260,14 +260,26 @@ $(document).on('keypress', function (e) {
   }
 });
 var $searchForm = $('.searchForm');
-var $input = $($searchForm.children('input')[0]);
-$input.on('click', function () {
+var $input = $('.input');
+var isClick = false;
+$input.hover(function () {
   $input.css({
     'width': '500px'
   });
+}, function () {
+  if (!isClick) {
+    $input.css({
+      'width': '200px'
+    });
+  }
+});
+$input.on('click', function () {
+  isClick = !isClick;
+  $input.addClass("active");
 });
 var $cover = $('.cover');
 var $bgbox = $('.bgbox');
+var $globalMain = $('.globalMain');
 $searchForm.on('click', function (e) {
   $time.css({
     'visibility': 'hidden'
@@ -278,6 +290,11 @@ $searchForm.on('click', function (e) {
   });
 });
 $cover.on('click', function (e) {
+  isClick = !isClick;
+  $input.removeClass("active");
+  $input.css({
+    'width': '200px'
+  });
   $time.css({
     'visibility': 'visible'
   });
@@ -314,7 +331,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55334" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53211" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

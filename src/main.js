@@ -125,22 +125,41 @@ $(document).on('keypress',(e) => {
     }
 })
 const $searchForm = $('.searchForm')
-const $input = $($searchForm.children('input')[0])
+const $input = $('.input')
+let isClick = false
+$input.hover(
+    function(){
+        $input.css({'width':'500px'})
+    },
+    function(){
+        if(!isClick){
+            $input.css({'width':'200px'})
+        }  
+    }
+)
 $input.on('click',function(){
-    $input.css({'width':'500px'})
+    isClick=!isClick
+    $input.addClass("active")
 })
 const $cover = $('.cover')
 const $bgbox = $('.bgbox')
+const $globalMain = $('.globalMain')
 $searchForm.on('click',function(e){
     $time.css({'visibility':'hidden'})
     $bgbox.addClass('focus')
     $headerList.css({"opacity":"1"})
 })
 $cover.on('click',function(e){
+    isClick=!isClick
+    $input.removeClass("active")
+    $input.css({'width':'200px'})
     $time.css({'visibility':'visible'})
     $bgbox.removeClass('focus')
     $headerList.css({"opacity":"0"})
 })
+
+
+
 
 
 
